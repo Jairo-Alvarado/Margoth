@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margoth Invitación</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+      *{
+        margin: 0;
+      }
+
+      body {
+        background: pink; /* Cambia el color de fondo a rosado */
+      }
+
+      .contenedor{
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+      }
+
+      p{
+        font-size: xx-large;
+        padding: 1%;
+        margin-top: 0;
+      }
+
+      button{
+        font-size: xx-large;
+        padding: 0.75em;
+      }
+
+      #yesBtn{
+        transform: translate(-100%,0);
+      }
+
+      #noBtn{
+        position: absolute;
+      }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+      <img src="https://media1.giphy.com/media/9G0AdBbVrkV3O/200w.webp?cid=ecf05e4726qam9ah1nia3m6iiubhspr3kk0obmswwa3toc5g&ep=v1_gifs_search&rid=200w.webp&ct=g" alt="GIF de amor o cariño">
+        <p>Hola querida Nelly, me he tomado el atrevimiento de hacer esto porque
+        <br>Me encantaría pasar tiempo contigo y disfrutar de una tarde especial juntos. <br>¿Estarías interesada en ser mi acompañante?
+        <br><br>El lugar y la hora seran a convenir, solo dímelo.
+        <br>Espero con ansias tu respuesta. 
+        <br><br>PD: Recuerdo que la última vez que salimos me pediste que la invitación sea creativa así que espero que esta nueva invitación sobrepase tus expectativas</p>
+
+        <button id="yesBtn">Acepto</button>
+        <button id="noBtn">No acepto</button>
+    </div>
+
+    <script>
+      const yesBtn = document.querySelector('#yesBtn');
+
+      yesBtn.addEventListener('click',function () {
+          alert('Sabía que ibas a decir que sí, coordinemos el horario para esa tarde juntos :3');
+      });
+
+      const noBtn = document.querySelector('#noBtn');
+
+      noBtn.addEventListener('mouseover', function () {
+          const randomX = parseInt(Math.random()*100);
+          const randomY = parseInt(Math.random()*100);
+          noBtn.style.setProperty('top',randomY+'%');
+          noBtn.style.setProperty('left',randomX+'%');
+          noBtn.style.setProperty('transform',`translate(-${randomX}%,-${randomY}%)`);
+      });
+    </script>
+</body>
+</html>
